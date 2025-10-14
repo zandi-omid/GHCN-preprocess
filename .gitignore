@@ -1,0 +1,34 @@
+# ---- Python & Environment ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# ---- Data & Logs ----
+*.csv
+*.hdf5
+*.nc
+*.h5
+*.tar.gz
+*.zip
+*.log
+*.out
+nohup_out_*.log
+
+# ---- IDE / System files ----
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# ---- Notebooks ----
+*.ipynb_checkpoints/
+
+# ---- Project-specific ----
+us_stations/
+mx_stations/
