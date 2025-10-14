@@ -6,19 +6,19 @@ GHCNPreprocessor
 Combine, filter, and clean GHCN-Daily station CSVs for a given study region.
 
 Features:
-- Reads thousands of station CSVs in parallel
+- Reads stations' CSVs in parallel
 - Filters by latitude/longitude bounding box and date range
 - Handles measurement flags (MFLAG) and quality flags (QFLAG)
-- Optionally excludes community networks like CoCoRaHS
+- Optionally excludes networks like CoCoRaHS or any not desired data sources
 - Converts precipitation (PRCP) from tenths of mm → mm
 
 Author: Omid Zandi
+Affiliation: University of Arizoan, Department of Hydrology and Atmospheric Sciences
 """
 
 import pandas as pd
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor, as_completed
-
 
 class GHCNPreprocessor:
     def __init__(
