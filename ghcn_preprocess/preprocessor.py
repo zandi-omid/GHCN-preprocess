@@ -87,7 +87,7 @@ class GHCNPreprocessor:
             if file.name.startswith(self.exclude_prefixes):
                 return None
 
-            df = pd.read_csv(file, parse_dates=["DATE"])
+            df = pd.read_csv(file, parse_dates=["DATE"], low_memory=False)
 
             lat, lon = df["LATITUDE"].iloc[0], df["LONGITUDE"].iloc[0]
             if not (self.min_lat <= lat <= self.max_lat and self.min_lon <= lon <= self.max_lon):
